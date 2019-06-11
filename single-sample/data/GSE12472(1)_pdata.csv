@@ -1,0 +1,29 @@
+,Organism,Sample_type,Sample_source_name_ch1,subtype,Sample_description,Normal
+GSM313235,Homo sapiens,RNA,"B01, no COPD",Norm_NO_COPD,"No COPD, normal B01 (COPD-study)",1
+GSM313236,Homo sapiens,RNA,"B02, no COPD",Norm_NO_COPD,"No COPD, normal B02 (COPD-study)",1
+GSM313237,Homo sapiens,RNA,"B03, COPD",Norm_COPD,"COPD, normal B03 (COPD-study)",0
+GSM313238,Homo sapiens,RNA,"B04, COPD",Norm_COPD,"COPD, normal B04 (COPD-study)",0
+GSM313239,Homo sapiens,RNA,"B05, COPD",Norm_COPD,"COPD, normal B05 (COPD-study)",0
+GSM313240,Homo sapiens,RNA,"B06, no COPD",Norm_NO_COPD,"No COPD, normal B06 (COPD-study)",1
+GSM313241,Homo sapiens,RNA,"B07, no COPD",Norm_NO_COPD,"No COPD, normal B07 (COPD-study)",1
+GSM313242,Homo sapiens,RNA,"B08, COPD",Norm_COPD,"COPD, normal B08 (COPD-study)",0
+GSM313243,Homo sapiens,RNA,"B09, no COPD",Norm_NO_COPD,"No COPD, normal B09 (COPD-study)",1
+GSM313244,Homo sapiens,RNA,"B10, no COPD",Norm_NO_COPD,"No COPD, normal B10 (COPD-study)",1
+GSM313245,Homo sapiens,RNA,"B11, no COPD",Norm_NO_COPD,"No COPD, normal B11 (COPD-study)",1
+GSM313246,Homo sapiens,RNA,"B12, no COPD",Norm_NO_COPD,"No COPD, normal B12 (COPD-study)",1
+GSM313247,Homo sapiens,RNA,"B13, no COPD",Norm_NO_COPD,"No COPD, normal B13 (COPD-study)",1
+GSM313248,Homo sapiens,RNA,"B14, no COPD",Norm_NO_COPD,"No COPD, normal B14 (COPD-study)",1
+GSM313249,Homo sapiens,RNA,"B15, COPD",Norm_COPD,"COPD, normal B15 (COPD-study)",0
+GSM313250,Homo sapiens,RNA,"B16, COPD",Norm_COPD,"COPD, normal B16 (COPD-study)",0
+GSM313251,Homo sapiens,RNA,"B17, COPD",Norm_COPD,"COPD, normal B17 (COPD-study)",0
+GSM313252,Homo sapiens,RNA,"B18, COPD",Norm_COPD,"COPD, normal B18 (COPD-study)",0
+GSM313253,Homo sapiens,RNA,"B19, COPD",Norm_COPD,"COPD, normal B19 (COPD-study)",0
+GSM313254,Homo sapiens,RNA,"B20, COPD",Norm_COPD,"COPD, normal B20 (COPD-study)",0
+GSM313255,Homo sapiens,RNA,"B21, COPD",Norm_COPD,"COPD, normal B21 (COPD-study)",0
+GSM313256,Homo sapiens,RNA,"B22, COPD",Norm_COPD,"COPD, normal B22 (COPD-study)",0
+GSM313257,Homo sapiens,RNA,"B23, COPD",Norm_COPD,"COPD, normal B23 (COPD-study)",0
+GSM313258,Homo sapiens,RNA,"B24, COPD",Norm_COPD,"COPD, normal B24 (COPD-study)",0
+GSM313259,Homo sapiens,RNA,"B25, COPD",Norm_COPD,"COPD, normal B25 (COPD-study)",0
+GSM313260,Homo sapiens,RNA,"B26, COPD",Norm_COPD,"COPD, normal B26 (COPD-study)",0
+GSM313261,Homo sapiens,RNA,"B27, COPD",Norm_COPD,"COPD, normal B27 (COPD-study)",0
+GSM313262,Homo sapiens,RNA,"B28, COPD",Norm_COPD,"COPD, normal B28 (COPD-study)",0

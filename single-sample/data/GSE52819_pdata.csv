@@ -1,0 +1,7 @@
+,Organism,Sample_type,Sample_source_name_ch1,subtype,Sample_description,Normal
+GSM1276660,Homo sapiens,RNA,"Uninfected, replicate 1",Uninfected,"Uninfected, replicate 1",1
+GSM1276661,Homo sapiens,RNA,"Uninfected, replicate 2",Uninfected,"Uninfected, replicate 2",1
+GSM1276662,Homo sapiens,RNA,"Uninfected, replicate 3",Uninfected,"Uninfected, replicate 3",1
+GSM1276666,Homo sapiens,RNA,"Infected with H37Rv, replicate 1",Infected_H37Rv,"Infected with H37Rv, replicate 1",0
+GSM1276667,Homo sapiens,RNA,"Infected with H37Rv, replicate 2",Infected_H37Rv,"Infected with H37Rv, replicate 2",0
+GSM1276668,Homo sapiens,RNA,"Infected with H37Rv, replicate 3",Infected_H37Rv,"Infected with H37Rv, replicate 3",0

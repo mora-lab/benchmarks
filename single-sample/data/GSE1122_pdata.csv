@@ -1,0 +1,11 @@
+,Sample_organism_ch1 ,Sample_type,Sample_source_name_ch1,subtype,Sample_description,Normal
+GSM18403,Homo sapiens,RNA,lung tissue from undiseased (NML),NML,01_NML,1
+GSM18404,Homo sapiens,RNA,lung tissue from undiseased (NML),NML,02_NML,1
+GSM18405,Homo sapiens,RNA,lung tissue from undiseased (NML),NML,03_NML,1
+GSM18406,Homo sapiens,RNA,lung tissue from undiseased (NML),NML,04_NML,1
+GSM18407,Homo sapiens,RNA,lung tissue from undiseased (NML),NML,05_NML,1
+GSM18408,Homo sapiens,RNA,lung tissue from Alpha-1 Antitrypsin Deficiency-related emphysema (ADL),ADL,02_ADL,0
+GSM18409,Homo sapiens,RNA,lung tissue from Alpha-1 Antitrypsin Deficiency-related emphysema (ADL),ADL,03_ADL,0
+GSM18410,Homo sapiens,RNA,lung tissue from Alpha-1 Antitrypsin Deficiency-related emphysema (ADL),ADL,04_ADL,0
+GSM18411,Homo sapiens,RNA,lung tissue from Alpha-1 Antitrypsin Deficiency-related emphysema (ADL),ADL,05_ADL,0
+GSM18412,Homo sapiens,RNA,lung tissue from Alpha-1 Antitrypsin Deficiency-related emphysema (ADL),ADL,06_ADL,0
