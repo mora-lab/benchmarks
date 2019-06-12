@@ -1,0 +1,4 @@
+Term Name 	 Binom Rank 	 Binom Raw P-Value 	  Binom FDR Q-Val  	 Binom Fold Enrichment 	 Binom Observed Region Hits 	 Binom Region Set Coverage 	 Hyper Rank 	  Hyper FDR Q-Val  	 Hyper Fold Enrichment 	 Hyper Observed Gene Hits 	 Hyper Total Genes 	 Hyper Gene Set Coverage
+viral gene expression	749	4.006629E-46	5.58467379973298E-45	2.11572	454	0.005990473	462	0.011927652545455	1.098935	94	95	0.005786752
+viral transcription	831	6.740265E-41	8.46791415162455E-40	2.125831	396	0.005225171	523	0.027328346845124	1.097559	84	85	0.00517114
+translational termination	837	9.076496E-41	1.13212208172043E-39	2.071285	420	0.005541848	504	0.019394787785714	1.098147	88	89	0.005417385

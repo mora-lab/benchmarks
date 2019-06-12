@@ -1,0 +1,7 @@
+Term Name 	 Binom Rank 	 Binom Raw P-Value 	  Binom FDR Q-Val  	 Binom Fold Enrichment 	 Binom Observed Region Hits 	 Binom Region Set Coverage 	 Hyper Rank 	  Hyper FDR Q-Val  	 Hyper Fold Enrichment 	 Hyper Observed Gene Hits 	 Hyper Total Genes 	 Hyper Gene Set Coverage
+negative regulation of transferase activity	283	6.210328E-176	2.29101852720848E-174	2.076376	1856	0.02173939	318	0.001870355218868	1.082281	190	195	0.01169807
+negative regulation of kinase activity	299	5.981427E-169	2.08849825685619E-167	2.082904	1769	0.02072035	364	0.003971249802198	1.080578	179	184	0.01102081
+negative regulation of protein kinase activity	309	1.594994E-159	5.38891176699029E-158	2.076805	1682	0.01970132	423	0.007550975574468	1.078844	169	174	0.01040512
+transforming growth factor beta receptor signaling pathway	423	3.346241E-119	8.25880757446809E-118	2.071965	1262	0.01478184	389	0.00516337440617	1.093131	124	126	0.007634528
+positive regulation of nuclease activity	976	1.847903E-41	1.97665034016393E-40	2.04553	441	0.005165447	494	0.018299920955466	1.110762	67	67	0.004125108
+activation of signaling protein activity involved in unfolded protein response	1020	1.001723E-39	1.02529295294118E-38	2.03534	427	0.005001464	510	0.021887644235294	1.110762	65	65	0.00400197

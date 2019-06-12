@@ -1,0 +1,6 @@
+Term Name 	 Binom Rank 	 Binom Raw P-Value 	  Binom FDR Q-Val  	 Binom Fold Enrichment 	 Binom Observed Region Hits 	 Binom Region Set Coverage 	 Hyper Rank 	  Hyper FDR Q-Val  	 Hyper Fold Enrichment 	 Hyper Observed Gene Hits 	 Hyper Total Genes 	 Hyper Gene Set Coverage
+viral gene expression	556	4.533195E-26	8.5119704676259E-25	2.173908	233	0.006155228	507	0.012751895786982	1.120529	92	95	0.005900462
+viral transcription	644	9.328735E-22	1.51229803416149E-20	2.138797	199	0.00525704	611	0.033530460687398	1.11623	82	85	0.005259107
+intrinsic apoptotic signaling pathway in response to DNA damage	798	3.228671E-17	4.22397559398496E-16	2.019092	177	0.00467586	497	0.012195953384306	1.157068	51	51	0.003270908
+protein peptidyl-prolyl isomerization	940	1.302988E-14	1.44714837446809E-13	2.085401	136	0.003592751	621	0.036414904927536	1.157068	42	42	0.002693689
+large ribosomal subunit	136	1.493544E-16	1.38921555882353E-15	2.021047	169	0.004464522	116	0.015437612887931	1.126213	73	75	0.004681888

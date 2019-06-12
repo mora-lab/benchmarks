@@ -1,0 +1,7 @@
+Term Name 	 Binom Rank 	 Binom Raw P-Value 	  Binom FDR Q-Val  	 Binom Fold Enrichment 	 Binom Observed Region Hits 	 Binom Region Set Coverage 	 Hyper Rank 	  Hyper FDR Q-Val  	 Hyper Fold Enrichment 	 Hyper Observed Gene Hits 	 Hyper Total Genes 	 Hyper Gene Set Coverage
+negative regulation of ERBB signaling pathway	741	1.34799E-20	1.89919238866397E-19	2.064526	204	0.005026983	611	0.021681658723404	1.171874	42	42	0.002728158
+negative regulation of epidermal growth factor receptor signaling pathway	774	1.249911E-19	1.68592646511628E-18	2.049744	197	0.004854489	624	0.024888591923077	1.171874	41	41	0.002663202
+positive regulation of nuclease activity	777	1.488626E-19	2.00016157528958E-18	2.010215	206	0.005076267	647	0.030060503554869	1.136893	65	67	0.00422215
+kinase inhibitor activity	98	1.580917E-23	5.94941009795918E-22	2.032471	245	0.006037308	82	0.005249845512195	1.171874	57	57	0.003702501
+protein kinase inhibitor activity	99	1.972626E-23	7.34852998787879E-22	2.070496	233	0.005741603	85	0.008163366305882	1.171874	54	54	0.003507632
+nucleolar part	189	6.71037E-11	4.4913323015873E-10	2.113771	94	0.002316355	119	0.041043690378151	1.171874	35	35	0.002273465

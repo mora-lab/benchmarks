@@ -1,0 +1,4 @@
+Term Name 	 Binom Rank 	 Binom Raw P-Value 	  Binom FDR Q-Val  	 Binom Fold Enrichment 	 Binom Observed Region Hits 	 Binom Region Set Coverage 	 Hyper Rank 	  Hyper FDR Q-Val  	 Hyper Fold Enrichment 	 Hyper Observed Gene Hits 	 Hyper Total Genes 	 Hyper Gene Set Coverage
+cell-substrate junction	65	3.149517E-192	6.12944462307692E-191	2.049051	2104	0.01683968	77	0.009716486357143	1.072081	140	142	0.00843831
+focal adhesion	69	1.404386E-178	2.57470766666667E-177	2.065266	1917	0.015343	66	0.003944431	1.079096	130	131	0.007835574
+cell-substrate adherens junction	70	1.284579E-177	2.32141776428571E-176	2.046394	1950	0.01560712	64	0.002984042101563	1.079342	134	135	0.008076668

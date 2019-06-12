@@ -1,0 +1,4 @@
+Term Name 	 Binom Rank 	 Binom Raw P-Value 	  Binom FDR Q-Val  	 Binom Fold Enrichment 	 Binom Observed Region Hits 	 Binom Region Set Coverage 	 Hyper Rank 	  Hyper FDR Q-Val  	 Hyper Fold Enrichment 	 Hyper Observed Gene Hits 	 Hyper Total Genes 	 Hyper Gene Set Coverage
+negative regulation of retinoic acid receptor signaling pathway	42	2.987559E-23	7.42621808571429E-21	3.039104	111	0.003050875	2	7.49998116E-05	2.672962	25	32	0.004741134
+regulation of retinoic acid receptor signaling pathway	101	6.343675E-17	6.55722445544554E-15	2.441974	114	0.003133332	5	0.000596868372	2.404221	26	37	0.004930779
+retinoic acid receptor binding	16	1.448499E-21	3.338790195E-19	2.625954	130	0.003573097	1	0.0008760589528	2.30745	29	43	0.005499716
