@@ -36,21 +36,3 @@ r13 = applied_gsva_4methods(GSE52819_setentrez)
 
 ####combine datasets due to the disease
 cluster_H00342 = list("GSE50834" = r12,"GSE52819" = r13)
-
-###adjusting the structure of the result
-result_new_format = function(list_cluster){
-  i = 0
-  new_result = list()
-  a = c()
-  for (i in 1:length(list_cluster)) {
-    j = 1
-    new_result$result.ssgsea = cbind(a, list_cluster[[i]][[j]])
-    new_result$result.plage = cbind(a, list_cluster[[i]][[j+1]])
-    new_result$result.gsva = cbind(a, list_cluster[[i]][[j+2]])
-    new_result$result.zscore = cbind(a, list_cluster[[i]][[j+3]])
-    a = list_cluster[[i]][[j]]
-  }
-  new_result
-}
-
-try_H00342 = result_new_format(cluster_H00342)
