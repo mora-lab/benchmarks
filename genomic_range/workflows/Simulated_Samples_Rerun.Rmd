@@ -1,0 +1,78 @@
+---
+title: "Simulation_Results"
+author: "Shaurya Jauhari"
+date: "4/22/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r Block to run Chipenrich and Broadenrich on simulated datasets.}
+library(chipenrich)
+chipenrich_run <- function(x){
+  results <- list()
+  results [[i]] <- chipenrich(peaks = x, out_name = NULL, genesets = c("GOBP", "GOCC", "GOMF", "kegg_pathway"), genome = "hg19", qc_plots = FALSE, n_cores = 1)
+  return(results)
+}
+
+# chipenrich_simulation_results <- lapply(1:length(length_breakups),function(z) list())
+# chipenrich_simulation_results <- lapply(simulated_all_samples,chipenrich_run)
+
+chipenrich_run_sim10 <- list()
+chipenrich_run_sim20 <- list()
+chipenrich_run_sim30 <- list()
+chipenrich_run_sim40 <- list()
+chipenrich_run_sim50 <- list()
+
+chipenrich_run_sim10 <- lapply(simulated_all_samples1,chipenrich_run)
+saveRDS(chipenrich_run_sim10, file = "./Simulation_Results/chipenrich/chipenrich_run_sim10")
+rm(chipenrich_run_sim10)
+chipenrich_run_sim20 <- lapply(simulated_all_samples2,chipenrich_run)
+saveRDS(chipenrich_run_sim20, file = "./Simulation_Results/chipenrich/chipenrich_run_sim20")
+rm(chipenrich_run_sim20)
+chipenrich_run_sim30 <- lapply(simulated_all_samples3,chipenrich_run)
+saveRDS(chipenrich_run_sim30, file = "./Simulation_Results/chipenrich/chipenrich_run_sim30")
+rm(chipenrich_run_sim30)
+chipenrich_run_sim40 <- lapply(simulated_all_samples4,chipenrich_run)
+saveRDS(chipenrich_run_sim40, file = "./Simulation_Results/chipenrich/chipenrich_run_sim40")
+rm(chipenrich_run_sim40)
+chipenrich_run_sim50 <- lapply(simulated_all_samples5,chipenrich_run)
+saveRDS(chipenrich_run_sim50, file = "./Simulation_Results/chipenrich/chipenrich_run_sim50")
+rm(chipenrich_run_sim50)
+
+
+## Broadenrich; notably, it takes more time to execute. 
+ 
+broadenrich_run <- function(x){
+  results <- list()
+  results [[i]] <- broadenrich(peaks = x, out_name = NULL, genesets = c("GOBP", "GOCC", "GOMF", "kegg_pathway"), genome = "hg19", qc_plots = FALSE, n_cores = 1)
+  return(results)
+}
+
+broadenrich_run_sim10 <- list()
+broadenrich_run_sim20 <- list()
+broadenrich_run_sim30 <- list()
+broadenrich_run_sim40 <- list()
+broadenrich_run_sim50 <- list()
+
+broadenrich_run_sim10 <- lapply(simulated_all_samples1,broadenrich_run)
+saveRDS(broadenrich_run_sim10, file = "./Simulation_Results/broadenrich/broadenrich_run_sim10")
+rm(broadenrich_run_sim10)
+broadenrich_run_sim20 <- lapply(simulated_all_samples2,broadenrich_run)
+saveRDS(broadenrich_run_sim20, file = "./Simulation_Results/broadenrich/broadenrich_run_sim20")
+rm(broadenrich_run_sim20)
+broadenrich_run_sim30 <- lapply(simulated_all_samples3,broadenrich_run)
+saveRDS(broadenrich_run_sim30, file = "./Simulation_Results/broadenrich/broadenrich_run_sim30")
+rm(broadenrich_run_sim30)
+broadenrich_run_sim40 <- lapply(simulated_all_samples4,broadenrich_run)
+saveRDS(broadenrich_run_sim40, file = "./Simulation_Results/broadenrich/broadenrich_run_sim40")
+rm(broadenrich_run_sim40)
+broadenrich_run_sim50 <- lapply(simulated_all_samples5,broadenrich_run)
+saveRDS(broadenrich_run_sim50, file = "./Simulation_Results/broadenrich/broadenrich_run_sim50")
+rm(broadenrich_run_sim50)
+
+```
