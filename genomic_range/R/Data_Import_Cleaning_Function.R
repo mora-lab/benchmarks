@@ -34,7 +34,7 @@ Samples_in_BED = list()
 
 for(i in 1:length(ChIPSeqSamples))
 {
-  Samples_in_BED[[i]] <- read.table(paste("./regen/",paste(eval(parse(text="ChIPSeqSamples[i]")),".BED", sep = ""), sep = ""), sep = "\t", header = FALSE)
+  Samples_in_BED[[i]] <- read.table(paste("./regen/",paste(eval(parse(text="ChIPSeqSamples[i]")),".bed", sep = ""), sep = ""), sep = "\t", header = FALSE)
   Samples_in_BED[[i]] <- Samples_in_BED[[i]][,1:3]
   colnames(Samples_in_BED[[i]]) <- c("chrom", "start", "end")
   Samples_in_BED[[i]] <- Samples_in_BED[[i]][order(Samples_in_BED[[i]]$chrom),]
@@ -43,6 +43,7 @@ for(i in 1:length(ChIPSeqSamples))
 }
 
 ## Saving BED files as GRanges objects ##
+Samples_in_BED <- GRangesList(Samples_in_BED)
 names(Samples_in_BED) <- ChIPSeqSamples
 use_data(Samples_in_BED, internal = FALSE, overwrite = TRUE)
 }
