@@ -14,4 +14,3 @@ adjust_result_to_newstr = function(list_cluster){
   new_result
 }
 
-try_H00342 = adjust_result_to_newstr(cluster_H00342)
