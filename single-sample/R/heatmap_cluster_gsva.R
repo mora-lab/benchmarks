@@ -1,4 +1,12 @@
 heatmap_cluster_gsva = function(adj_result){
+  ### Install and library packages
+  if (!requireNamespace("BiocManager", quietly = TRUE))
+       install.packages("BiocManager")
+    BiocManager::install("pheatmap")
+    BiocManager::install("RColorBrewer")
+  library(pheatmap)
+  library(RColorBrewer)
+  
   nadj_result = pheatmap(adj_result,
                          scale="row",
                          cluster_row = TRUE,
