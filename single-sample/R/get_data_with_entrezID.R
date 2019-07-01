@@ -7,8 +7,7 @@
 ######## "bioc_annotation_package" parameter means the related annotation bioconductor package
 get_data_with_entrezID = function(series_matrix_file, bioc_annotation_package){
     ######## Installing package dependencies
-   if (!requireNamespace("BiocManager", quietly = TRUE))
-       install.packages("BiocManager")
+    install.packages("BiocManager")
     BiocManager::install("hu6800.db")
     BiocManager::install("hgug4112a.db")
     BiocManager::install("hgu133plus2.db")
@@ -48,10 +47,3 @@ get_data_with_entrezID = function(series_matrix_file, bioc_annotation_package){
   newmatrixdata = as.matrix(newmatrixdata)
   newmatrixdata
 }
-
-## example to get matrix data with entrezID 
-GSE10245_setentrez = get_data_with_entrezID("data/GSE10245_series_matrix.csv", "hgu133plus2.db")
-
-#####because GSE12472 has entrezIDs as rows, just read it into R and change the data type into "matrix"
-GSE12472.1_setentrez =  as.matrix(read.csv("data/GSE12472(1)_series_matrix.csv", header = TRUE, row.names = 1))
-GSE12472.2_setentrez =  as.matrix(read.csv("data/GSE12472(2)_series_matrix.csv", header = TRUE, row.names = 1))
