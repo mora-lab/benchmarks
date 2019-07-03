@@ -1,18 +1,11 @@
 ### Installing package dependencies ###
 ### installing packages needed ###
 ###install and load data
-load("~/PIGSARData/.RData")
 ##### install.packages("~/PIGSARData/PIGSARData.0.1.2.tar.gz", repos = NULL, type = "source")
-####Geneset file
-KEGG_genesetcollection = getGmt("F:/lab_data/3. MSigDB files/c2.cp.kegg.v6.2.entrez.gmt",
-                                geneIdType = EntrezIdentifier(),
-                                collectionType = BroadCollection(category="c2"))
-KEGG_genesetcollection
 
 ####functions to get data
-applied_gsva_4methods =function(gse){
-  if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+applied_gsva_4methods = function(gse， KEGG_genesetcollection){
+  install.packages("BiocManager")
   BiocManager::install("Biobase")
   BiocManager::install("GSVA")
   BiocManager::install("GSVAdata")
@@ -30,9 +23,4 @@ applied_gsva_4methods =function(gse){
   }
 }
 
-###results of each dataset
-r12 = applied_gsva_4methods(GSE50834_setentrez)
-r13 = applied_gsva_4methods(GSE52819_setentrez)
 
-####combine datasets due to the disease
-cluster_H00342 = list("GSE50834" = r12,"GSE52819" = r13)
