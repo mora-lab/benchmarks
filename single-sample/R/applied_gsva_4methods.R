@@ -5,8 +5,7 @@
 
 ####functions to get data
 applied_gsva_4methods = function(gse， KEGG_genesetcollection){
-  if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+  install.packages("BiocManager")
   BiocManager::install("Biobase")
   BiocManager::install("GSVA")
   BiocManager::install("GSVAdata")
