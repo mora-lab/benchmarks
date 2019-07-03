@@ -1,0 +1,7 @@
+run_time_stamp,2019-07-02 13-57-15
+max_number_clusters,5
+nsample,1000
+reporting_pvalue,0.05
+reporting_nmin,5
+reporting_p_min_percentage,0.05
+reporting_d_min_quantile,0.05
