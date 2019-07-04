@@ -1,0 +1,2 @@
+Time	27	27	27	3	3	3	9	9	9	27	27	27	3	3	3	9	9	9	27	27	27	3	3	3	9	9	9	27	27	27	3	3	3	9	9	9
+Group	Cold	Cold	Cold	Cold	Cold	Cold	Cold	Cold	Cold	Control	Control	Control	Control	Control	Control	Control	Control	Control	Heat	Heat	Heat	Heat	Heat	Heat	Heat	Heat	Heat	Salt	Salt	Salt	Salt	Salt	Salt	Salt	Salt	Salt
