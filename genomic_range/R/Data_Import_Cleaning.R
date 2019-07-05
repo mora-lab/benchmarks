@@ -3,7 +3,8 @@ Data_Import_Cleaning <- function(){
   tryCatch({
     ### Sourcing tools from GEO ###
     
-    source("http://www.bioconductor.org/biocLite.R")
+    if (!requireNamespace("BiocManager", quietly = TRUE))
+      install.packages("BiocManager")
     
     BiocManager::install("GenomicRanges")
     BiocManager::install("rtracklayer")
@@ -45,7 +46,7 @@ Data_Import_Cleaning <- function(){
     
     for(i in 1:length(ChIPSeqSamples))
     {
-      Samples_in_BED[[i]] <- read.table(paste("./regen/",paste(eval(parse(text="ChIPSeqSamples[i]")),".bed", sep = ""), sep = ""), sep = "\t", header = FALSE)
+      Samples_in_BED[[i]] <- read.table(paste0("./regen/",paste0(eval(parse(text="ChIPSeqSamples[i]")),".bed")), sep = "\t", header = FALSE)
       Samples_in_BED[[i]] <- Samples_in_BED[[i]][,1:3]
       colnames(Samples_in_BED[[i]]) <- c("chrom", "start", "end")
       Samples_in_BED[[i]] <- Samples_in_BED[[i]][order(Samples_in_BED[[i]]$chrom),]

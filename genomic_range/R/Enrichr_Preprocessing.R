@@ -10,7 +10,6 @@ for (i in 1:length(names(enrichr_go_results_shredded)))
     if(names(enrichr_go_results_shredded)[i] == names(enrichr_kegg_results_shredded)[j])
     {
       count <- count+1
-      sprint(count, "Same name")
     }
   }
 }
@@ -24,14 +23,14 @@ enrichr_go_terms_extracted_results_shredded <- list()
 enrichr_go_terms_extracted_results_shredded <- enrichr_go_results_shredded
 for (i in 1:length(enrichr_go_results_shredded))
 {
-  enrichr_go_terms_extracted_results_shredded[[i]]$Term <- str_extract(string = print(eval(parse(text=paste("enrichr_go_results_shredded$",paste(eval(parse(text="names(enrichr_go_results_shredded)[i]")),"$Term", sep = ""), sep = "")))), pattern = "GO:[0-9]+")
+  enrichr_go_terms_extracted_results_shredded[[i]]$Term <- str_extract(string = print(eval(parse(text=paste0("enrichr_go_results_shredded$",paste0(eval(parse(text="names(enrichr_go_results_shredded)[i]")),"$Term"))))), pattern = "GO:[0-9]+")
 }
 
 enrichr_kegg_terms_extracted_results_shredded <- list()
 enrichr_kegg_terms_extracted_results_shredded <- enrichr_kegg_results_shredded
 for (i in 1:length(enrichr_kegg_results_shredded))
 {
-  enrichr_kegg_terms_extracted_results_shredded[[i]]$Term <- str_extract(string = print(eval(parse(text=paste("enrichr_kegg_results_shredded$",paste(eval(parse(text="names(enrichr_kegg_results_shredded)[i]")),"$Term", sep = ""), sep = "")))), pattern = "hsa[0-9]+")
+  enrichr_kegg_terms_extracted_results_shredded[[i]]$Term <- str_extract(string = print(eval(parse(text=paste0("enrichr_kegg_results_shredded$",paste0(eval(parse(text="names(enrichr_kegg_results_shredded)[i]")),"$Term"))))), pattern = "hsa[0-9]+")
 }
 
 ## Combining Enrichr KEGG and GO results

@@ -3,8 +3,10 @@ Enrichr_Results_Compilation <- function(){
 ## Pulling Enrichr Results from a local directory.
 
 ## In the command prompt, type in  dir (for WINDOWS) or ls (for Ubuntu/MAC OS) to redirect the file listing of a directory to a seperate file, as "file_names.txt" here.
+tryCatch( {enrichr_go_samples <- read.table("./Results/enrichr/GO_BP_2018/file_names.txt")}
+          ,error = function(e){ print("File not found"); break;}
+          ,finally = function (f){next;})
 
-enrichr_go_samples <- read.table(".Enrichr_Results/GO_BP_2018/file_names.txt")
 enrichr_go_samples <- as.character(enrichr_go_samples$V1)
 for(i in 1:length(enrichr_go_samples)){enrichr_go_samples[i] <- substr(enrichr_go_samples[i],1,nchar(enrichr_go_samples[i])-4)}
 
@@ -18,7 +20,7 @@ for (i in 1: length(ChIPSeqSamples))
   {
     if(enrichr_go_samples[j] == ChIPSeqSamples[i])
     {
-      enrichr_go[[j]] <-read.table(paste("./Enrichr_Results/GO_BP_2018/",paste(eval(parse(text='ChIPSeqSamples[i]')),".txt", sep = ""), sep = ""), sep = '\t', header = TRUE, quote = "", fill = TRUE)
+      enrichr_go[[j]] <-read.table(paste0("./Results/enrichr/GO_BP_2018/",paste0(eval(parse(text='ChIPSeqSamples[i]')),".txt")), sep = '\t', header = TRUE, quote = "", fill = TRUE)
     }
   }
 }
@@ -29,7 +31,7 @@ for (i in 1: length(ChIPSeqSamples))
 
 enrichr_kegg <- list()
 
-enrichr_kegg_samples <- read.table("./Enrichr_Results/KEGG_2016/file_names.txt")
+enrichr_kegg_samples <- read.table("./Results/enrichr/KEGG_2016/file_names.txt")
 enrichr_kegg_samples <- as.character(enrichr_kegg_samples$V1)
 for(i in 1:length(enrichr_kegg_samples)){enrichr_kegg_samples[i] <- substr(enrichr_kegg_samples[i],1,nchar(enrichr_kegg_samples[i])-4)}
 
@@ -43,12 +45,10 @@ for (i in 1: length(ChIPSeqSamples))
   {
     if(enrichr_kegg_samples[j] == ChIPSeqSamples[i])
     {
-      enrichr_kegg[[j]] <-read.table(paste("./Enrichr_Results/KEGG_2016/",paste(eval(parse(text='ChIPSeqSamples[i]')),".txt", sep = ""), sep = ""), sep = '\t', header = TRUE, quote = "", fill = TRUE)
+      enrichr_kegg[[j]] <-read.table(paste0("./Results/enrichr/KEGG_2016/",paste0(eval(parse(text='ChIPSeqSamples[i]')),".txt")), sep = '\t', header = TRUE, quote = "", fill = TRUE)
     }
   }
 }
-
-
 
 
 ## Condensed Results
