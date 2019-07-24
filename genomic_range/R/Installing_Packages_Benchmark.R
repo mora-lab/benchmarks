@@ -1,17 +1,20 @@
 Install_Packages_Benchmark <- function(){
   
   ## Installing packages of GSA tools
-  source('http://www.bioconductor.org/biocLite.R')
+  if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
   BiocManager::install('seq2pathway')
-  BiocManager::install('enrichR')
   BiocManager::install('broadenrich')
   BiocManager::install('chipenrich')
   
+  ## Install and load devtools to facilitate package sourcing from github.
+  install.packages("devtools")
+  library(devtools)
   
   ## Loading Benchmark dataset
   ## Sourcing the compiled gold standard benchmark dataset
   
-  install.packages("GSAChIPSeqGold_0.1.1.tar.gz", repos = NULL, type = "source")
+  install_github("shauryajauhari/GSAChIPSeqBenchmarkData")
   
   
   ## Loading Packages
