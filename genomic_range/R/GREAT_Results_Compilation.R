@@ -27,6 +27,7 @@ for (i in 1: length(ChIPSeqSamples))
 ## Converting GO Terms to GO ids
 ## Creating a GO.db library to parse
 # load the GO library
+BiocManager::install("GO.db")
 library(GO.db)
 
 # extract a named vector of all terms
@@ -60,15 +61,18 @@ names(great_results) <- as.character(great_samples)
 
 for (j in 1:length(great_results))
 {
-  for(k in 1:nrow(great_results[[j]]))
-  {
-    for(i in 1:nrow(GO_Term_Db))
+  tryCatch({for(k in 1:nrow(great_results[[j]]))
     {
-      if(as.character(great_results[[j]]$Term.Name[k]) == GO_Term_Db$Term[i])
+      for(i in 1:nrow(GO_Term_Db))
       {
-        great_results[[j]]$Term.ID[k] <- GO_Term_Db$ID[i]
+        if(as.character(great_results[[j]]$Term.Name[k]) == GO_Term_Db$Term[i])
+        {
+          great_results[[j]]$Term.ID[k] <- GO_Term_Db$ID[i]
+        }
       }
     }
   }
-}
+  , error=function(e){cat("The sample with index", j,"has error.\n")}
+  , finally={next;})
+  }
 }

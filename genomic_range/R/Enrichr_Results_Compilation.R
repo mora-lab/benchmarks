@@ -31,7 +31,9 @@ for (i in 1: length(ChIPSeqSamples))
 
 enrichr_kegg <- list()
 
-enrichr_kegg_samples <- read.table("./Results/enrichr/KEGG_2016/file_names.txt")
+tryCatch( {enrichr_kegg_samples <- read.table("./Results/enrichr/KEGG_2016/file_names.txt")}
+          ,error = function(e){ print("File not found"); break;}
+          ,finally = function (f){next;})
 enrichr_kegg_samples <- as.character(enrichr_kegg_samples$V1)
 for(i in 1:length(enrichr_kegg_samples)){enrichr_kegg_samples[i] <- substr(enrichr_kegg_samples[i],1,nchar(enrichr_kegg_samples[i])-4)}
 
