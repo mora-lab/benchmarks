@@ -2,6 +2,7 @@ Execute_Chipenrich_Broadenrich_Seq2pathway <- function(){
 ## Testing individual data in benchmark dataset with each GSA tool package
 ## Also, since several of the tools don't acknowledge the mitochondrial DNA ("chrMT") entries have to be removed from the BED files.
 library(chipenrich)
+library(seq2pathway)
 regenerated_samples <- list()
 seq2pathway_results <- list()
 
