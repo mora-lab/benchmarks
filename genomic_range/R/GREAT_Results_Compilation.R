@@ -2,7 +2,7 @@ GREAT_Results_Compilation <- function(){
 
 ## In the command prompt, type in  *dir* (for Windows) or *ls* (for Ubuntu/MAC OS) to redirect the file listing of a directory to a seperate file, as "file_names.txt" here.
 
-great_samples <- read.table("./GREAT_Results/file_names.txt")
+great_samples <- read.table("/home/postdoc1/Desktop/GSAChIPSeqBenchmarkDataBase/GREAT_Results/file_names.txt")
 great_samples <- as.character(great_samples$V1)
 for(i in 1:length(great_samples)){great_samples[i] <- substr(great_samples[i],1,nchar(great_samples[i])-4)}
 
@@ -18,7 +18,7 @@ for (i in 1: length(ChIPSeqSamples))
   {
     if(great_samples[j] == ChIPSeqSamples[i])
     {
-      great_in_results[[j]] <-read.table(paste0("./GREAT_Results/",paste0(eval(parse(text='ChIPSeqSamples[i]')),".tsv")), sep = '\t', header = TRUE, quote = "", fill = TRUE)
+      great_in_results[[j]] <-read.table(paste0("/home/postdoc1/Desktop/GSAChIPSeqBenchmarkDataBase/GREAT_Results/",paste0(eval(parse(text='ChIPSeqSamples[i]')),".tsv")), sep = '\t', header = TRUE, quote = "", fill = TRUE)
     }
   }
 }
@@ -27,6 +27,8 @@ for (i in 1: length(ChIPSeqSamples))
 ## Converting GO Terms to GO ids
 ## Creating a GO.db library to parse
 # load the GO library
+
+install.packages("BiocManager", repos = "https://mirrors.tuna.tsinghua.edu.cn/CRAN/", dependencies = TRUE)
 BiocManager::install("GO.db")
 library(GO.db)
 
