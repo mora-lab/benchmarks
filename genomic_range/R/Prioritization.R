@@ -23,12 +23,12 @@ for (d in 1:length(disease_pools))
         }
     }
   }
-  # cat("The enrichment terms that matched are:\n")
-  # for (k in ranks)
-  # {
-  #   print(eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[[1]][[k]])
-  # }
-  
+  cat("The enrichment terms that matched are:\n")
+  for (k in ranks)
+  {
+    print(eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[[1]][[k]])
+  }
+
   for_prioritization <- as.double((ranks[[1]]/nrow((eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[1]))*100))
   cat("\nThe metric for prioritization for",as.character(disease_pools[d]), "is",for_prioritization,"\n")
 
