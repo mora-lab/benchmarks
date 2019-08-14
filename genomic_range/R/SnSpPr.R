@@ -40,7 +40,9 @@ SnSpPr <- function()
                     false_negatives[[count2]]<- j
                     count2 <- count2 + 1
                   }
-            
+            }
+        }
+    }
   
     ## Tool results' subsets on the basis of statistical significance.
     greater_than_0.05 <- eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[which(eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[2] > 0.05),]
@@ -51,11 +53,6 @@ SnSpPr <- function()
     false_positives2_ids <- setdiff(less_than_0.05[1],j)
   
     false_positives <- c(false_positives1_ids,false_positives2_ids)
-  
-  
-          }
-      }
-  }
   
     ## Results
     cat("\nThe following are the metrics for", as.character(disease_pools[d]),"\n")
