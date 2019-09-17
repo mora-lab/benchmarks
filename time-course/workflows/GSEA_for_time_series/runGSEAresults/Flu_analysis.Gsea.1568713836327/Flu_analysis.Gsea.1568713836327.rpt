@@ -1,0 +1,33 @@
+producer_class	xtools.gsea.Gsea
+producer_timestamp	1568713836327
+param	zip_report	false
+param	num	100
+param	scoring_scheme	weighted
+param	norm	meandiv
+param	out	C:\Users\acer\aaaaaalab\paperReading\GSEA_english_tutorial\GSEA_for_time_series\runGSEAresults
+param	mode	Max_probe
+param	include_only_symbols	true
+param	set_max	500
+param	gmx	ftp.broadinstitute.org://pub/gsea/gene_sets/c2.cp.kegg.v7.0.symbols.gmt
+param	plot_top_x	20
+param	nperm	1000
+param	order	descending
+param	rpt_label	Flu_analysis
+param	rnd_seed	timestamp
+param	set_min	15
+param	res	C:\Users\acer\aaaaaalab\paperReading\GSEA_english_tutorial\GSEA_for_time_series\example_files\GSEA_expr_Flu.gct
+param	create_svgs	false
+param	cls	C:\Users\acer\aaaaaalab\paperReading\GSEA_english_tutorial\GSEA_for_time_series\example_files\GSEA_timepoint.cls#Fluticasone
+param	sort	real
+param	create_gcts	false
+param	help	false
+param	save_rnd_lists	false
+param	median	false
+param	metric	Pearson
+param	make_sets	true
+param	rnd_type	no_balance
+param	gui	false
+param	permute	phenotype
+param	collapse	false
+
+file	C:\Users\acer\aaaaaalab\paperReading\GSEA_english_tutorial\GSEA_for_time_series\runGSEAresults\Flu_analysis.Gsea.1568713836327\index.html
