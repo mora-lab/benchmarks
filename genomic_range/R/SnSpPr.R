@@ -47,10 +47,10 @@ SnSpPr <- function()
     ## Tool results' subsets on the basis of statistical significance.
     greater_than_0.05 <- eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[which(eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[2] > 0.05),]
     less_than_0.05 <- eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[which(eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[2] <= 0.05),]
-    true_negatives_ids <- setdiff(greater_than_0.05$Geneset.ID, eval(parse(text=disease_pools[d]))) ## All ids that are there in the tool result with p > 0.05 and absent in the disease pool.
+    true_negatives_ids <- setdiff(greater_than_0.05[[1]], eval(parse(text=disease_pools[d]))) ## All ids that are there in the tool result with p > 0.05 and absent in the disease pool.
     
-    false_positives1_ids <- intersect(eval(parse(text=disease_pools[d])),greater_than_0.05$Geneset.ID)
-    false_positives2_ids <- setdiff(less_than_0.05$Geneset.ID,eval(parse(text=disease_pools[d])))
+    false_positives1_ids <- intersect(eval(parse(text=disease_pools[d])),greater_than_0.05[[1]])
+    false_positives2_ids <- setdiff(less_than_0.05[[1]],eval(parse(text=disease_pools[d])))
     
     false_positives <- c(false_positives1_ids,false_positives2_ids)
     

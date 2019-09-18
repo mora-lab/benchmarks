@@ -89,7 +89,7 @@ GREAT_Results_Compilation <- function(){
       }
      else
      {
-       great_results_shredded[[i]] <- great_results[[i]][,c(3,2,1)]
+       great_results_shredded[[i]] <- great_results[[i]][,c(3,2)]
      }
   }
   names(great_results_shredded) <- as.character(great_samples)
