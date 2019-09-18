@@ -23,7 +23,7 @@ GREAT_Results_Compilation <- function(){
     {
       if(great_samples[j] == ChIPSeqSamples[i])
       {
-        great_in_results[[j]] <-read.table(paste0("./Results/great/",paste0(eval(parse(text='ChIPSeqSamples[i]')),".tsv")), sep = '\t', header = TRUE, quote = "", fill = TRUE)
+        great_in_results[[j]] <-read.table(paste0("./Results/great/",paste0(eval(parse(text='ChIPSeqSamples[i]')),".tsv")), sep = "\t", header = TRUE)
       }
     }
   }
@@ -77,9 +77,22 @@ GREAT_Results_Compilation <- function(){
   }
     , error=function(e){cat("The sample with index", j,"has error.\n")}
     , finally={next;})
-    
-    ## Reordering columns for consistency with results from other tools. 
-    great_results[[j]] <- great_results[[j]][,c(3,2,1)]
-    
+  }  
+  ## Reordering columns for consistency with results from other tools.
+  ## Bypassing the erroneous sample results.
+  great_results_shredded <- list()
+  for(i in 1:length(great_results))
+   {
+     if(length(great_results[[i]])!=3)
+      {
+        next;
+      }
+     else
+     {
+       great_results_shredded[[i]] <- great_results[[i]][,c(3,2,1)]
+     }
   }
+  names(great_results_shredded) <- as.character(great_samples)
 }
+
+
