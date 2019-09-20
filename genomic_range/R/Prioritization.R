@@ -34,3 +34,7 @@ for (d in 1:length(disease_pools))
 
 }
 }
+
+## (For GREAT) Note that in the resultant table, the zero entries reflect that there are no matches between the 
+## disease terms and the tool output. While the empty cells mean that the output for the particular sample was not
+## available.
