@@ -38,15 +38,15 @@ SnSpPr <- function()
     
     library(tidyverse)
     
-    cat("True positives for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), "is",length(true_positives),"\n")
-    cat("\nTrue negatives for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), "is",length(true_negatives_ids),"\n")
-    cat("\nFalse negatives for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), "is",length(false_negatives),"\n")
-    cat("\nFalse positives for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), "is",length(false_positives),"\n")
+    cat("True positives for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), ":",length(true_positives),"\n")
+    cat("\nTrue negatives for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), ":",length(true_negatives_ids),"\n")
+    cat("\nFalse negatives for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), ":",length(false_negatives),"\n")
+    cat("\nFalse positives for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), ":",length(false_positives),"\n")
     precision <- length(true_positives)/(length(true_positives)+length(false_positives))
-    cat("\nPrecision for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), "is", paste0(as.character(precision*100)," %") ,"\n")
+    cat("\nPrecision for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), ":", paste0(as.character(round((precision*100), 4))," %"),"\n")
     sensitivity <- length(true_positives)/(length(true_positives)+length(false_negatives))
-    cat("\nSensitivity for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), "is", paste0(as.character(sensitivity*100)," %"),"\n")
+    cat("\nSensitivity for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), ":", paste0(as.character(round((sensitivity*100), 4))," %"),"\n")
     specificity <- length(true_negatives_ids)/(length(true_negatives_ids)+length(false_positives))
-    cat("\nSpecificity for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), "is", paste0(as.character(specificity*100)," %"),"\n\n")
+    cat("\nSpecificity for", word(gsub("_", " ", as.character(disease_pools[d])),1:2), ":", paste0(as.character(round((specificity*100), 4))," %"),"\n\n")
   } 
 }
