@@ -9,7 +9,6 @@ sam <- as.integer(readline("Enter the sample index (Refer ChIPSeqMaster):"))
 for (d in 1:length(disease_pools))
 {
   ranks <- list()
-  prioritization_list <- list()
   x <- 1
 
   for (i in 1:length(eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[[1]]))
@@ -30,7 +29,7 @@ for (d in 1:length(disease_pools))
   }
 
   for_prioritization <- as.double((ranks[[1]]/nrow((eval(parse(text=(paste0(paste0(tools_results[tool],"$"), ChIPSeqSamples[sam]))))[1]))*100))
-  cat("\nThe metric for prioritization for",as.character(disease_pools[d]), "is",for_prioritization,"\n")
+  cat("\nPrioritization for",word(gsub("_", " ", as.character(disease_pools[d])),1:2), ":",round(for_prioritization,4),"\n")
 
 }
 }
