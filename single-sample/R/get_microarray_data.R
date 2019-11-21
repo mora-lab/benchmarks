@@ -4,17 +4,18 @@
 ### Email: shuxcy@126.com
 ### ---------------
 
-
-get_microarray_data = function(pdata_file, geo_accession, bioc_annotation_package){  ### make sure of the R annotation package
+get_microarray_data = function(geo_accession, pdata_file, bioc_annotation_package){  ### make sure of the R annotation package
 
     ## read phenotype data into R
     phenotype_data = read.table(pdata_file, header=TRUE, row.names = 1)
+	phenotype_data = phenotype_data[order(rownames(phenotype_data)), ]
     expression_data = getGEO(geo_accession, destdir = ".", getGPL = FALSE)
     expression_data = exprs(expression_data[[1]])
     expression_data = as.data.frame(expression_data)
     
 	### match samples between phenotype_data and expression_data
 	expression_data = expression_data[which(colnames(expression_data) %in% rownames(phenotype_data)),]
+	expression_data = expression_data[, order(colnames(expression_data))]
 	
 	#### convert probe ids into 
 	expression_data$probe_id = rownames(expression_data)
@@ -36,6 +37,6 @@ get_microarray_data = function(pdata_file, geo_accession, bioc_annotation_packag
 	result
 }
 
-### GSE10245 = get_microarray_data(pdata_file = "~/GSE10245_pdata.txt",
-###                      geo_accession = "GSE10245",
-###                      bioc_annotation_package = "hgu133plus2.db")
+### GSE10245 = get_microarray_data(geo_accession = "GSE10245",
+###                                pdata_file = "~/GSE10245_pdata.txt",                      
+###                                bioc_annotation_package = "hgu133plus2.db")

@@ -1,4 +1,4 @@
-,Sample_organism_ch1,Sample_type,Sample_source_name_ch1,subtype,Sample_description,Normal
+,Organism,Sample_type,Sample_source_name,subtype,Sample_description,Normal
 GSM258551,Homo sapiens,RNA,human non-small cell lung cancer tumor tissue,NSCLC_AC,NSCLC_AC_10,1
 GSM258552,Homo sapiens,RNA,human non-small cell lung cancer tumor tissue,NSCLC_AC,NSCLC_AC_16,1
 GSM258553,Homo sapiens,RNA,human non-small cell lung cancer tumor tissue,NSCLC_SCC,NSCLC_SCC_22,0
