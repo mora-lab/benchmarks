@@ -14,6 +14,7 @@ run_pathifier = function(new_gsedata, PATHWAYS){
                                           min_exp = new_gsedata$min_exp)
   
   result.PDS = t(mapply(FUN = c, result$scores))
+  # colnames(result.PDS) = colnames(gsedata)
   result.PDS
 }
 
