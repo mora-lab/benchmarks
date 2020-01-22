@@ -1,4 +1,5 @@
 \name{extractingValuedResults}
+\alias{extractingValuedResults}
 
 \title{Extracting enrichment terms and p-values from the results of Chipenrich, Broadenrich, and Seq2pathway tool-runs }
 

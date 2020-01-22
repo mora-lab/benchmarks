@@ -1,4 +1,5 @@
 \name{enrichrPostprocessing}
+\alias{enrichrPostprocessing}
 
 \title{Extracting enrichment terms and p-values from results of Enrichr}
 
@@ -7,7 +8,7 @@
 \usage{enrichrPostprocessing()}
 
 
-\details{This function is only to be used after the execution of enrichrResultsCompilation() function.}
+\note{This function is only to be used after the execution of enrichrResultsCompilation() function.}
 
 \value{The function returns the following to the local media.
 \item{enrichrResultsShredded.rds }{Object of consolidated results from Enrichr}}

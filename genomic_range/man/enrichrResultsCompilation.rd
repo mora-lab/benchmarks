@@ -1,4 +1,5 @@
 \name{enrichrResultsCompilation}
+\alias{enrichrResultsCompilation}
 
 \title{Compiling results from Enrichr: GO and KEGG}
 

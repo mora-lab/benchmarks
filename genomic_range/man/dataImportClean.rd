@@ -1,4 +1,5 @@
 \name{dataImportClean}
+\alias{dataImportClean}
 
 \title{Data importation and refining}
 

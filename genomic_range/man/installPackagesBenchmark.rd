@@ -1,4 +1,6 @@
 \name{installBenchmarkPackages}
+\alias{installBenchmarkPackages}
+
 
 \title{Installing requisite packages for the benchmarking protocol}
 

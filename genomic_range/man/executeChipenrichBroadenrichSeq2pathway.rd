@@ -1,4 +1,5 @@
 \name{executeChipenrichBroadenrichSeq2pathway}
+\alias{executeChipenrichBroadenrichSeq2pathway}
 
 \title{Execution of Chipenrich, Broadenrich, and Seq2pathway tools}
 
