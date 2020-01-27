@@ -1,4 +1,4 @@
-plotMetrics <- function(x)
+plotMetrics <- function(x, metric)
 {
   library(tidyr) ## 'gather' function
   library(ggplot2)
@@ -9,5 +9,5 @@ plotMetrics <- function(x)
   ggplot(data = y,
          mapping = aes(Tool, medianValue, fill=Tool, na.rm = FALSE)) +
     geom_boxplot(varwidth = TRUE) +
-    labs(x= "Tool", y= "Metric")
+    labs(x= "TOOL", y= toupper(as.character(metric)))
 }
