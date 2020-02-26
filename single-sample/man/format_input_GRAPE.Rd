@@ -24,8 +24,8 @@ A list of contorl data and tumor data.
 \author{Chengshu Xie <shuxcy@126.com>}
      \examples{
      \dontrun{
-	 # if you want to make it run successfully, you should specify the "pdata_file".
-     ### GSE10245 = get_microarray_data(geo_accession = "GSE10245",
+	 ### if you want to make it run successfully, you should specify the "pdata_file".
+         ### GSE10245 = get_microarray_data(geo_accession = "GSE10245",
 	 ###                                pdata_file = "git@github.com:/mora-lab/benchmarks/blob/master/single-sample/data/GSE10245_pdata.csv",                      
 	 ###                                bioc_annotation_package = "hgu133plus2.db")
 	 ### GRAPE_input_GSE10245 = format_input_GRAPE(GSE10245)
