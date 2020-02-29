@@ -23,4 +23,4 @@ read_gmt = function(file){
   return(newGS)
    
 }
-### COPD_target_pathway = read.gmt("git@github.com:/mora-lab/benchmarks/blob/master/single-sample/data/COPD.target.pathway.symbols.gmt")
+### COPD_target_pathway = read_gmt("git@github.com:/mora-lab/benchmarks/blob/master/single-sample/data/COPD.target.pathway.symbols.gmt")
