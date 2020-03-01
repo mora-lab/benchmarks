@@ -2,7 +2,7 @@
 \alias{run_individPath}
 
 \title{
-Get 
+Get p-values of disrupted pathways 
 }
 \description{
 This function is used to to detect pathways with significantly disrupted intrapathway relative expression orderings (REOs) for each disease sample
