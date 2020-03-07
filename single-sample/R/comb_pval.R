@@ -8,7 +8,7 @@ comb_pval = function(Pval.res){
   
   com_pvals = c() 
   temp = c() 
-  for(j in 1:length(Pval.res){
+  for(j in 1:nrow(Pval.res){
 	### use methods in "metap"
 	temp[[j]]= sumlog(c(Pval.res[j,]))$p
       # rownames(temp[i,j]) = rownames(P.res1[i,j])
