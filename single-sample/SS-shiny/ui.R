@@ -31,7 +31,7 @@ shinyUI(fluidPage(
                  # tags$hr(),
                  h3(strong("Method selection")),
                  checkboxGroupInput(inputId = "GSEAMethods",
-                                    label = strong("3. GSA Methods(select all methods for now):"),
+                                    label = strong("3. GSA Methods(at least choose 3 methods):"),
                                     selected = c("plage",
                                                  "zscore",
                                                  "ssgsea",
@@ -56,37 +56,34 @@ shinyUI(fluidPage(
                                              "meanp(Run with at least 4 methods)" = "meanp"), 
                               selected = "sumlog"),
                  # tags$hr(),
-                 radioButtons(inputId = "plot", 
-                              label = "5. Benchmark metrics:",
-                              choices = c("Sensitivity comparison" ='sn',
-                                          "Specificity comparison"='sp', 
-                                          "Precision comparison"='pr', 
-                                          "ROC plot"= 'roc'),
-                              selected = 'sn'),
-                actionButton(inputId = "submit", label="Submit", icon("fas fa-magic"))
-                ),
-               mainPanel(
-                 tabsetPanel(type = "tab",
-                             tabPanel(h3("Preview of datasets"), 
-                                      # verbatimTextOutput("value"),
-                                      h4(strong("1. Expression Data Preview(Only one dataset shown here)")),
-                                      DT::dataTableOutput("expTable"),
-                                      h4(strong("2. Target pathway Preview(Only one list of target pathway here)")),
-                                      verbatimTextOutput("Target")), # Show file contents.
-                             tabPanel(h3("Preview of Results"),
-                                      h4(strong("Results of Sensitivity, specificity and precision:")),
-                                      verbatimTextOutput("result"), # Show file contents.
-                                      h4(strong("Comparison plot")),
-                                      shiny::plotOutput("cplot")),  
-                             #tabPanel(h3("Comparison Plots"),
-                             #        shiny::plotOutput("nplot", width = "100%", height = "1000px")),
-                             tabPanel(h3("Download"),          
-                                      downloadButton('downloadData', 'Download result RData'))
-                 )
-               )
-             )
-    ),
-	### Benchmark Study Results
+                 strong("5. Benchmark metrics:"),
+                 checkboxInput(inputId = "sn","Sensitivity comparison", value = T),
+                 checkboxInput(inputId = "sp","Specificity comparison"),
+                 checkboxInput(inputId = "pr","Precision comparison"),
+                 checkboxInput(inputId = "roc","ROC Curve"),
+                 actionButton(inputId = "submit", label="Submit", icon("fas fa-magic"))
+                 ),
+									mainPanel(
+									  tabsetPanel(type = "tab",
+									              tabPanel(h3("Preview of datasets"), 
+									                       h4(strong("1. Expression Data Preview(Only one dataset shown here)")),
+									                       shiny::textOutput("text1"),
+									                       DT::dataTableOutput("expTable"),
+									                       h4(strong("2. Target pathway Preview(Only one list of target pathway here)")),
+									                       verbatimTextOutput("Target")), # Show file contents.
+									              tabPanel(h3("Preview of Results"),
+									                       h4(strong("Results of Sensitivity, specificity and precision:")),
+									                       shiny::textOutput("text2"),
+									                       verbatimTextOutput("result"), # Show file contents.
+									                       h4(strong("Comparison plot")),
+									                       shiny::textOutput("text3"),
+									                       shiny::plotOutput("cplot", width = "100%", height = "500px")),
+									              tabPanel(h3("Download"),          
+									                       downloadButton('downloadData', 'Download result RData'))
+									              )
+									  )
+									)),
+    ### Benchmark Study Results
     tabPanel("Example: Benchmark study",
              span(h2(strong("Results of SS-Benchmark Study"), style = "color : steelblue")),
              sidebarLayout(
@@ -105,7 +102,7 @@ shinyUI(fluidPage(
                              tabPanel(h3("Comparison Plots"),
                                       h4(strong("Comparison plots:")),
                                       tags$img(src="image/allplots.png", align="center",
-                                               width = "100%", height = "1000px"),
+                                               width = "125%", height = "1250px"),
                                       p("Fig : A comparison of sensitivity, specificity, precision and ROC plot of 8 gene set analysis methods."))
                                      )))),
 	  ### Contact

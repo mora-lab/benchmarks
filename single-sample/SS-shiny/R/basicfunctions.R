@@ -81,37 +81,37 @@ run_methods = function(expData, pathway, GSEA.Methods, pvalCombMethod){
   data = expData[-1,];
   
   if ("plage" %in% GSEA.Methods){
-    print("Running plage!")
+    showNotification(paste("Running PLAGE!"), duration = 20, type = "message")
     result$res.plage = GSVA::gsva(as.matrix(data), pathway$KEGGgscollection, method = "plage", 
-                            mx.diff = FALSE, parallel.sz=2, abs.ranking = FALSE, verbose=TRUE)
-    print("plage is done successfully!")
+                            mx.diff = FALSE, parallel.sz=2, abs.ranking = FALSE, verbose=FALSE)
+    showNotification(paste("PLAGE is done successfully!"), duration = 20, type = "message")
     pval.res$pval.plage = run_limma(result$res.plage, expData)
   } 
   if ("zscore" %in% GSEA.Methods){
-    print("Running zscore!")
+    showNotification(paste("Running ZSCORE!"), duration = 20, type = "message")
     result$res.zscore = GSVA::gsva(as.matrix(data), pathway$KEGGgscollection, method = "zscore", 
-                             mx.diff = FALSE, parallel.sz=2, abs.ranking = FALSE, verbose=TRUE)
-    print("zscore is done successfully!")
+                             mx.diff = FALSE, parallel.sz=2, abs.ranking = FALSE, verbose=FALSE)
+    showNotification(paste("ZSCORE is done successfully!"), duration = 20, type = "message")
     pval.res$pval.zscore = run_limma(result$res.zscore, expData)
   } 
   if ("ssgsea" %in% GSEA.Methods){
-    print("Running ssgsea!")
+    showNotification(paste("Running SSGSEA!"), duration = 20, type = "message")
     result$res.ssgsea = GSVA::gsva(as.matrix(data), pathway$KEGGgscollection, method = "ssgsea", 
-                             mx.diff = FALSE, parallel.sz=2, abs.ranking = FALSE, verbose=TRUE)
-    print("ssgsea is done successfully!")
+                             mx.diff = FALSE, parallel.sz=2, abs.ranking = FALSE, verbose=FALSE)
+    showNotification(paste("SSGSEA is done successfully!"), duration = 20, type = "message")
     pval.res$pval.ssgsea = run_limma(result$res.ssgsea, expData)
   } 
   if ("gsva" %in% GSEA.Methods){
-    print("Running gsva!")
+    showNotification(paste("Running GSVA!"), duration = 20, type = "message")
     result$res.gsva = GSVA::gsva(as.matrix(data), pathway$KEGGgscollection, method = "gsva", 
-                           mx.diff = FALSE, parallel.sz=2, abs.ranking = FALSE, verbose=TRUE)
-    print("gsva is done successfully!")
+                           mx.diff = FALSE, parallel.sz=2, abs.ranking = FALSE, verbose=FALSE)
+    showNotification(paste("GSVA is done successfully!"), duration = 20, type = "message")
     pval.res$pval.gsva = run_limma(result$res.gsva, expData)
   } 
   if ("GRAPE" %in% GSEA.Methods){
-    print("Running GRAPE!")
+    showNotification(paste("Running GRAPE!"), duration = 20, type = "message")
     result$res.GRAPE = run_GRAPE(expData, pathway$msigKEGG)
-    print("GRAPE is done successfully!")
+    showNotification(paste("GRAPE is done successfully!"), duration = 20, type = "message")
     pval.res$pval.GRAPE = run_limma(result$res.GRAPE, expData)
   }
   
@@ -203,3 +203,4 @@ newSSPresult = function(SSP_cal) {
   return(as.data.frame(SSP))
   
 }
+

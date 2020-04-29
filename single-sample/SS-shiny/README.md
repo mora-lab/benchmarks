@@ -5,7 +5,7 @@
 ## 1. How to run the shiny app
 ```
 library(shiny)
-shiny::runGitHub('shiny_test','chengshu21')
+shiny::runGitHub('SS_Shiny','chengshu21')
 ```
 ![Screen shot1](https://github.com/Chengshu21/SS_Shiny/blob/master/WWW/screenshot1.png)
 

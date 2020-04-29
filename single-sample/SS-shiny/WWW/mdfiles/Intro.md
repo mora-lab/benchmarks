@@ -1,6 +1,6 @@
 #### The Goal:
 The following example is a comparison between 7 of the most used single-sample Gene Set Analysis methods, in order to find the methods with the best sensitivity, specificity, and precision.
-* [GSVA]("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3618321/") - "Gene set variation analysis". 	 
+* [GSVA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3618321/) - "Gene set variation analysis". 	 
 * [SSGSEA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2783335/) - "Single sample gene set enrichment analysis".
 * [PLAGE](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1261155/) - "Pathway level analysis of gene expression".
 * [ZSCORE](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2563693/) - a classification method based on pathway activities inferred for each patient. 
