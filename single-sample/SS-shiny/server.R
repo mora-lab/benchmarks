@@ -104,6 +104,7 @@ shinyServer(function(input, output, session){
     }
     newSSP.result = do.call(rbind, newSSP.res);
     newSSP.result$Methods = gsub("PVAL.", "", toupper(newSSP.result$Methods))
+    rownames(newSSP.result) = NULL
     
     ROCdata = newSSP.result
     ROCdata$FPR = 1-ROCdata$specificity
@@ -125,6 +126,8 @@ shinyServer(function(input, output, session){
     if (!input$sn) return(NULL)
     ggplot(resOutput()$SSP.result, aes(Methods, sensitivity, fill = Methods))+ ## sensitivity
       geom_boxplot()+
+      #geom_dotplot(binaxis='y', stackdir='center', dotsize=1)+
+      geom_jitter(shape=16, position=position_jitter(0.2))+
       xlab("Methods")+
       ylab("Sensitivity")
   })
@@ -132,6 +135,8 @@ shinyServer(function(input, output, session){
     if (!input$sp) return(NULL)
     ggplot(resOutput()$SSP.result, aes(Methods,specificity, fill = Methods))+  ## specificity
       geom_boxplot()+
+      #geom_dotplot(binaxis='y', stackdir='center', dotsize=1)+
+      geom_jitter(shape=16, position=position_jitter(0.2))+
       xlab("Methods")+
       ylab("Specificity")
   })
@@ -139,17 +144,19 @@ shinyServer(function(input, output, session){
     if (!input$pr) return(NULL)
     ggplot(resOutput()$SSP.result, aes(Methods,precision, fill = Methods))+  ## precision
       geom_boxplot() +
+      #geom_dotplot(binaxis='y', stackdir='center', dotsize=1)+
+      geom_jitter(shape=16, position=position_jitter(0.2))+
       scale_y_sqrt()+
       xlab("Methods")+
       ylab("Precision")
     })
-  pt4 <- reactive({
-    if (!input$roc) return(NULL)
-    ggplot(resOutput()$ROC.result, aes(d = Type,m = Value, color = Methods))+ 
-      geom_roc() + 
-      style_roc(theme = theme_grey, xlab = "Specificity",ylab = "Sensitivity") + ggtitle("ROC") +
-      ggsci::scale_color_lancet()
-  })
+  # pt4 <- reactive({
+  #     if (!input$roc) return(NULL)
+  #   ggplot(resOutput()$ROC.result, aes(d = Type,m = Value, color = Methods))+ 
+  #     geom_roc() + 
+  #     style_roc(theme = theme_grey, xlab = "Specificity",ylab = "Sensitivity") + ggtitle("ROC") +
+  #     ggsci::scale_color_lancet()
+  # })
   ### Plots of Results
   output$text2 <-  renderText({
     t = paste("You have choose the methods:")
@@ -172,7 +179,7 @@ shinyServer(function(input, output, session){
   })
   
   output$cplot <- renderPlot({
-    ptlist <- list(pt1(),pt2(),pt3(),pt4())
+    ptlist <- list(pt1(),pt2(),pt3())#,pt4())
     # wtlist <- c(input$sn,input$sp,input$pr, input$roc)
     to_delete <- !sapply(ptlist,is.null)
     
