@@ -7,6 +7,6 @@ The "Enrichr_Workflow" file contains...<br>
 The "Overall_Workflow" file contains...
 ## How to run and/or edit the jupyter notebooks?
 ## References
-See our papers:<br>
-XIE, C., JAUHARI, S., MORA, A., Popularity and performance of bioinformatics software -The case of gene set analysis, 2020
-MORA, A., Gene set analysis methods for the functional interpretation of non-mRNA data -Genomic range and ncRNA data, Briefings in Bioinformatics, 2019
+See our papers:<br><br>
+XIE, C., JAUHARI, S., MORA, A. (2020), Popularity and performance of bioinformatics software -The case of gene set analysis<br>
+MORA, A. (2019), Gene set analysis methods for the functional interpretation of non-mRNA data -Genomic range and ncRNA data, Briefings in Bioinformatics
