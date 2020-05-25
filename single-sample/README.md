@@ -2,7 +2,7 @@
 First version: May 25th, 2020<br>
 Last review: May 25th, 2020
 ## What is single-sample GSA?
-Single Sample Gene Set Analysis(ss-GSA) is a specific type of Gene Set Analysis, used to calculate each individual sample’s pathway score for comparison among those individuals in normal and disease status. ss-GSA methods are concentrated on individual samples.
+**S**ingle **S**ample **G**ene **S**et **A**nalysis(ss-GSA) is a specific type of Gene Set Analysis, used to calculate each individual sample’s pathway score for comparison among those individuals in normal and disease status. ss-GSA methods are concentrated on individual samples.
 ## Contents
 * The **R** folder contains functions that used to manage data format, read `.GMT` files, get microarray data, run each ss-GSA tools and computing sensitivity, specificity and precision(SSP for short). <br>
 * The **data** folder contains target pathways of each disease, and the phenotype data information of benchmark datasets. <br>
