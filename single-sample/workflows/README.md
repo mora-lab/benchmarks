@@ -7,9 +7,9 @@ Last review: May 25th, 2020
 1. The **data** folder contains the input data objects that used in each workflow. <br>
 2. The **inprocess** folder contains workflows which are not able to be used currently. <br>
 3. The workflows and tutorials:
-* **Workflows:**
+* **Workflows:**  <br>
 The "Benchmark study on single sample gene set analysis tools.ipynb" is under the "inprocess" folder.
-* **Tutorials:**
+* **Tutorials:** <br>
 a. The "Tutorial of GSVA using data GSE10245.ipynb" file contains the useage of GSVA packages, using the example data ["GSE10245"](https://github.com/mora-lab/benchmarks/blob/master/single-sample/workflows/data/GSE10245.RDS). <br>
 b. The "Tutorial of GRAPE using data GSE10245.ipynb" file contains the useage of GRAPE pckages, using the example data ["GSE10245"](https://github.com/mora-lab/benchmarks/blob/master/single-sample/workflows/data/GSE10245.RDS). <br>
 c. The "Tutorial of pathifier using data GSE10245.ipynb" file contains the useage of pathifier pckages, using the example data ["GSE10245"](https://github.com/mora-lab/benchmarks/blob/master/single-sample/workflows/data/GSE10245.RDS). <br>
