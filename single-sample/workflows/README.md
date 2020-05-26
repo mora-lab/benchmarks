@@ -8,6 +8,9 @@ Last review: May 25th, 2020
 * The inprocess folder contains workflows which are not able to be used currently. <br>
 * The "GSVA_xxx.ipython" file contains the workflow and useage of GSVA packages, the xxx means the example dataset in use. <br>
 * The "GRAPE_xxx.ipython" file contains the workflow and useage of GRAPE pckages, the xxx means the example dataset in use. 
+## How to watch the jupyter notebooks successfully?
+1. Turn to the [nbviewer](https://nbviewer.jupyter.org/).
+2. Copy the website address of the `.ipython` file(For example, copy the address of "GRAPE_GSE10245.ipynb": https://github.com/mora-lab/benchmarks/blob/master/single-sample/workflows/GRAPE_GSE10245.ipynb), paste it and click the `Go!` button in the nbviewer page.
 ## How to run and/or edit the jupyter notebooks?
 1. Make sure that you have installed jupyter botebook already, and have added R kernel in it. You could follow the tutorial in the [jupyter home](https://jupyter.org/install).
 2. You could try the example dataset directly in the `data` folder and also you could use your own dataset. `Enter` + `Shift` to  run the codes under `code` mode. 
