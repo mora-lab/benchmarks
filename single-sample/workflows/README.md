@@ -5,10 +5,10 @@ Last review: May 25th, 2020
 **S**ingle **S**ample **G**ene **S**et **A**nalysis(**ss-GSA**) is a specific type of Gene Set Analysis, used to calculate each individual sample’s pathway score for comparison among those individuals in normal and disease status. ss-GSA methods are concentrated on individual samples.
 ## Contents
 1. The **data** folder contains the input data objects that used in each workflow. <br>
-2. The **inprocess** folder contains workflows which are not able to be used currently. <br>
+2. The **inprocess** folder contains workflows/tutorials which are not able to be used currently. <br>
 3. The workflows and tutorials:
 * **Workflows:**  <br>
-The "Workflow of Benchmark study on single sample GSA tools.ipynb" contains the procedure of benchmark study on ss-GSA tools.
+The "Workflow_v.1.0.ipynb" contains the procedure of benchmark study on ss-GSA tools.
 * **Tutorials:** <br>
 a. The "Tutorial of GSVA using data GSE10245.ipynb" file contains the useage of GSVA packages, using the example data ["GSE10245"](https://github.com/mora-lab/benchmarks/blob/master/single-sample/workflows/data/GSE10245.RDS). <br>
 b. The "Tutorial of GRAPE using data GSE10245.ipynb" file contains the useage of GRAPE pckages, using the example data ["GSE10245"](https://github.com/mora-lab/benchmarks/blob/master/single-sample/workflows/data/GSE10245.RDS). <br>
