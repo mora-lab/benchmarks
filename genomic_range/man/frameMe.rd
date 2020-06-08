@@ -3,7 +3,7 @@
 
 \title{Extracting column "Median" from all data frames in a list.}
 
-\description{This function assembles together the plot ready median values from all diseases, for all samples, for each tool, into a single data frame.}
+\description{This function assembles together the plot ready target-pathway specific values from all diseases, for all samples, for each tool, into a single data frame.}
 
 \usage{frameMe(x)}
 

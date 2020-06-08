@@ -14,7 +14,7 @@ listToFrame(x)
 }
 
 
-\value{\item{finalFrame}{Annotated data frame with appropriate column names (disease names), and additonal columns of median value and sample names.}}
+\value{\item{finalFrame}{Annotated data frame with appropriate column names (disease names), and additonal columns of target-pathway specific values and sample names.}}
 
 
 \author{Shaurya Jauhari}
