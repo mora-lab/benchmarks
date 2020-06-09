@@ -1,6 +1,6 @@
 # Benchmark workflows for genomic-range GSA methods
 First version: May 25th, 2020<br>
-Last review: May 28th, 2020
+Last review: June 9th, 2020
 ## What is genomic-range GSA?
 A genomic-range GSA is a process of seeking functional enrichment for the genomic regions. This goes a tier deeper than mapping genes to pathways, and we now map genomic regions to genes and then to pathways. Typically the results from **Gene Ontology (GO)** and **Kyoto Encyclopedia of Genes and Genomes (KEGG)** are sought for the same.<br>
 ## Contents
